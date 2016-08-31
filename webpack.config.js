@@ -1,6 +1,6 @@
 module.exports = {
 	entry: {
-		main: "./src/app.js"
+		main: "./src/Parent.js"
 	},
 	output: {
 		filename: "bundle.js",
@@ -15,6 +15,13 @@ module.exports = {
 				loader: "babel"
 			}
 		]
-	}
+	},
+	devServer: {
+          contentBase: './public'
+        , historyApiFallback: true
+        , stats: {
+            colors: true
+        }
+    }
 	
 }
